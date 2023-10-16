@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+::-webkit-scrollbar {
+    width: 15px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px #111; 
+    border-radius: 5px;
+  }
+   
+  ::-webkit-scrollbar-thumb {
+    box-shadow: 0 0 20px 1px #fff;
+    background: #fff; 
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #aaa; 
+  }
+
+body {
+    overflow-x: hidden;
+    margin: 0;
+    min-height: 200vh;
+    background: #262626;
+}
+
+.header {
+    top: 0;
+    transition: transform 0.3s ease;
+    height: 69px;
+    background: #262626;
+    position: fixed;
+    width: 100vw;
+    box-shadow: 0 0 20px 1px #000a;
+}
+
+.reverse-downer {
+    transform: translateY(-69px);
+}
+
+.main {
+    height: 100vh;
+    position: absolute;
+    max-width: 100vw;
+    bottom: -5px;
+    z-index: -1;
+}
+
+.background-img {
+    height: 100vh;
+    background: linear-gradient(#000a, #0004, #000a), url(./img/SomeBgShitt.png);
+    background-size: cover;
+    width: 100vw;
+    z-index: -2;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.header-navigation {
+    width: 1200px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 69px;
+}
+
+.nav-a {
+    letter-spacing: 3px;
+    font-size: 30px;
+    color: #eee;
+    text-decoration: none;
+}
+
+.main .txt {
+    z-index: 1;
+    color: #fff;
+    font-family: 'Roboto Slab', serif;
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.main .txt .blur {
+    box-shadow: 0 0 40px 1px #000;
+    width: 100vw;
+    height: 40vh;
+    backdrop-filter: blur(5px);
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.main-h1 {
+    line-height: 20px;
+    font-size: 90px;
+    font-weight: 600;
+}
+
+.main-h2 {
+    width: 600px;
+    font-size: 25px;
+    font-weight: 200;
+}
+
+.mainer-main {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    top: 100vh;
+    z-index: 1;
+    background: linear-gradient(175deg,#111 ,#222 49.9%, #368d70 50%, #a9dfcd);
+}
