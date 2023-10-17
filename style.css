@@ -2,31 +2,31 @@
 
 ::-webkit-scrollbar {
     width: 15px;
-  }
+}
   
-  ::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
     box-shadow: inset 0 0 5px #111; 
     border-radius: 5px;
   }
    
-  ::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
     box-shadow: 0 0 20px 1px #fff;
     background: #fff; 
     border-radius: 10px;
   }
   
-  ::-webkit-scrollbar-thumb:hover {
+::-webkit-scrollbar-thumb:hover {
     background: #aaa; 
   }
 
 body {
-    overflow-x: hidden;
+    overflow: hidden;
     margin: 0;
-    min-height: 200vh;
     background: #262626;
 }
 
 .header {
+    z-index: 69;
     top: 0;
     transition: transform 0.3s ease;
     height: 69px;
@@ -36,24 +36,52 @@ body {
     box-shadow: 0 0 20px 1px #000a;
 }
 
+.header-hint {
+    z-index: 4;
+    transition: transform 0.3s ease;
+    position: absolute;
+    width: 100vw;
+    height: 69px;
+    background: #000;
+}
+
 .reverse-downer {
     transform: translateY(-69px);
 }
 
+.reverse-downer .header-hint {
+    transform: translateY(100%);
+
+}
+
 .main {
+    scroll-snap-align: end;
     height: 100vh;
-    position: absolute;
     max-width: 100vw;
-    bottom: -5px;
     z-index: -1;
 }
 
 .background-img {
+    color: #b8cc45;
     height: 100vh;
     background: linear-gradient(#000a, #0004, #000a), url(./img/SomeBgShitt.png);
-    background-size: cover;
     width: 100vw;
     z-index: -2;
+}
+
+.content-container {
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+    height: 100vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.page-section {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    flex: none;
 }
 
 .container {
@@ -112,10 +140,105 @@ body {
 }
 
 .mainer-main {
-    position: absolute;
+    scroll-snap-align: center;
     height: 100vh;
     width: 100vw;
-    top: 100vh;
     z-index: 1;
-    background: linear-gradient(175deg,#111 ,#222 49.9%, #368d70 50%, #a9dfcd);
+}
+
+.main-article {
+    background-repeat: no-repeat;
+    transition: transform 0.3s ease, filter 0.4s ease;
+    width: 100vw;
+    padding: 20vh 0vw;
+    position: absolute;
+    height: 100vh;
+}
+
+.main-h1-container {
+    background: #000c;
+    border-radius: 0px 0px 10px 10px;
+    left: 15vw;
+    transition: padding 0.3s ease;
+    padding:2vh;
+    color: white;
+    text-align: center;
+    width: 70vw;
+    z-index: 5;
+    position: absolute;
+}
+
+.un-upper-decker {
+    padding:7vh 2vh 2vh;
+}
+
+.mainer-h1 {
+    letter-spacing: 10px;
+    line-height: 20px;
+    font-size: 45px;
+    font-weight: 600;
+}
+
+
+.article-h1 {
+    font-size: 90px;
+    color: #fff;
+}
+
+.article-h2 {
+    color: #fff;
+}
+
+#article1 {
+    background-image: linear-gradient(to right, #000e, #000a), url(./img/F4s3yp.jpg);
+    padding: 20vh 10vw;
+}
+
+#article2{
+    width: 100vw;
+    background-image: linear-gradient(#0003, #000), url(./img/1330715.png);
+    transform: translateX(100vw);
+    text-align: center;
+}
+
+#article3 {
+    background-image: linear-gradient(to right, #0007, #000), url(./img/disgust.jpg);
+    text-align: end;
+    transform: translateX(200vw);
+    background-size: contain;
+}
+
+#article3 .article-h1 { margin-right: 10vw;}
+#article3 .article-h2 { margin-right: 10vw;}
+
+.article-scroller {
+    width: 200px;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px 100px;
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    background: #0002;
+    border: solid #0009 1px;
+    position: absolute;
+    z-index: 69;
+    bottom: 5vh;
+}
+
+.article-scroller-container {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.article-scroller-btn {
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: #fff;
+}
+
+.svg {
+    position: relative;
+    top: 3px;
 }

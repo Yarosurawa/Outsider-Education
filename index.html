@@ -4,35 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Будинок школяра</title>
-        <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     
 
+    <div class="header-hint" id="header-hint"></div>
     <header class="header container" id="header">
         <div class="container-data">
             <nav class="header-navigation">
-                <a href="#" class="nav-a">Home</a>
-                <a href="#" class="nav-a">Some</a>
+                <a href="#main" class="nav-a">Початок</a>
+                <a href="#mainer-main" class="nav-a">Гуртки</a>
                 <a href="#" class="nav-a">Other</a>
                 <a href="#" class="nav-a">Stuff</a>
                 <a href="#" class="nav-a">PLacer</a>
             </nav>
         </div>
     </header>
-
-    <main class="main">
-        <div class="background-img container">
-            <div class="txt">
-                <div class="blur">
-                    <h1 class="main-h1">Грицівський Ліцей</h1>
-                    <h4 class="main-h2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora eos natus atque minima perferendis in illum aliquam explicabo, ut necessitatibus quibusdam repellat qui magnam est sequi, soluta minus, iusto voluptate.</h4>
+    <div class="content-container" id="content-container">
+        <main class="main page-section" id="main">
+            <div class="background-img container">
+                <div class="txt">
+                    <div class="blur">
+                        <h1 class="main-h1">Грицівська школа спрянню здоров'я</h1>
+                        <h4 class="main-h2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia ducimus porro nemo itaque inventore quisquam quas quis vel architecto eaque aliquam fuga beatae facere reprehenderit, sapiente asperiores nulla tempora officia!</h4>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <div class="mainer-main page-section" id="mainer-main">
+            <div class="main-h1-container " id="main-h1-container">
+                <h1 class="mainer-h1">Гуртки</h1>
+            </div>
+            <article class="main-article" id="article1">
+                <h1 class="article-h1">Гурток Механотехніки</h1>
+                <h2 class="article-h2">Шось там треба короче з механікою </h2>
+            </article>
+            <article class="main-article" id="article2">
+                <h1 class="article-h1">малювання</h1>
+                <h2 class="article-h2">asjdabsdja</h2>
+            </article>
+            <article class="main-article" id="article3">
+                <h1 class="article-h1">Programming</h1>
+                <h2 class="article-h2">фіфіадоівопалчисмлчапимврдпмлоіиумвгпдшркідвардшгруклорфдлркдшрдаорв</h2>
+            </article>
+            <div class="article-scroller-container">
+                <div class="article-scroller">
+                    <button class="article-scroller-btn" id="lScroll">&leftarrow;</button>
+                    <button class="article-scroller-btn" id="scroll1"><svg width="20" height="20" class="svg" id="svgN1"><circle cx="10" cy="10" r="8" fill="white" stroke="White"/></svg></button>
+                    <button class="article-scroller-btn" id="scroll2"><svg width="20" height="20" class="svg" id="svgN2"><circle cx="10" cy="10" r="8" fill="none" stroke="White"/></svg></button>
+                    <button class="article-scroller-btn" id="scroll3"><svg width="20" height="20" class="svg" id="svgN3"><circle cx="10" cy="10" r="8" fill="none" stroke="White"/></svg></button>
+                    <button class="article-scroller-btn" id="rScroll">&rightarrow;</button>
                 </div>
             </div>
         </div>
-    </main>
-    <div class="mainer-main">
-        
     </div>
     <script src="app.js"></script>
 </body>
