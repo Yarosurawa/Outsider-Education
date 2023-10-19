@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,300;1,700&family=Roboto+Condensed:wght@400;600&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 ::-webkit-scrollbar {
     width: 15px;
@@ -26,7 +26,7 @@ body {
 }
 
 .header {
-    z-index: 69;
+    z-index: 69421;
     top: 0;
     transition: transform 0.3s ease;
     height: 69px;
@@ -37,7 +37,7 @@ body {
 }
 
 .header-hint {
-    z-index: 4;
+    z-index: 69420;
     transition: transform 0.3s ease;
     position: absolute;
     width: 100vw;
@@ -134,12 +134,13 @@ body {
 }
 
 .main-h2 {
-    width: 600px;
+    width: 800px;
     font-size: 25px;
     font-weight: 200;
 }
 
 .mainer-main {
+    font-family: 'Merriweather', serif;
     scroll-snap-align: center;
     height: 100vh;
     width: 100vw;
@@ -181,35 +182,46 @@ body {
 
 
 .article-h1 {
+    line-height: 50px;
     font-size: 90px;
     color: #fff;
 }
 
 .article-h2 {
+    line-height: 20px;
+    font-size: 50px;
     color: #fff;
 }
 
 #article1 {
-    background-image: linear-gradient(to right, #000e, #000a), url(./img/F4s3yp.jpg);
+    background-image: linear-gradient(to right, #000e, #000a), url(./img/Арт-дизайн/391621140_799724065496078_2230877182809571011_n.jpg);
     padding: 20vh 10vw;
 }
 
 #article2{
-    width: 100vw;
-    background-image: linear-gradient(#0003, #000), url(./img/1330715.png);
+    background-image: linear-gradient(#0003, #000), url(./img/Художна\ школа/391730246_799723655496119_8271000992994979209_n.jpg);
+    background-position: 0px, -100px -400px;
     transform: translateX(100vw);
     text-align: center;
 }
 
 #article3 {
-    background-image: linear-gradient(to right, #0007, #000), url(./img/disgust.jpg);
-    text-align: end;
+    background-image: linear-gradient(#0007, #000), url(./img/Технічне\ моделювання/391625836_799723315496153_6326136114250703918_n.jpg);
+    text-align: center;
     transform: translateX(200vw);
-    background-size: contain;
+    background-size: cover;
 }
 
-#article3 .article-h1 { margin-right: 10vw;}
-#article3 .article-h2 { margin-right: 10vw;}
+#article4 {
+    background-image: linear-gradient(to right, #0007, #000), url(./img/Сучасного\ танцю/323279391_720502179476183_6670780537885319579_n.jpg);
+    text-align: end;
+    transform: translateX(300vw);
+    background-position: 0, -500px;
+    background-size: auto 100%;
+}
+
+#article4 .article-h1 { margin-right: 10vw;}
+#article4 .article-h2 { margin-right: 10vw;}
 
 .article-scroller {
     width: 200px;
@@ -241,4 +253,184 @@ body {
 .svg {
     position: relative;
     top: 3px;
+}
+
+.imgs {
+    position:absolute;
+    top: vh;
+}
+
+#article1 .imgs {
+    left: 60vw;
+    top: 50vh;
+}
+
+.imgs-img {
+    box-shadow: 0 0 40px 0 #000;
+    background: #0007;
+    border: 1px solid #0003;
+    position: relative;
+}
+
+#article3 .article-li {
+    list-style: none;
+    margin-right: 2.5vw;
+}
+
+.article-li {
+    color: #fff;
+    line-height: 30px;
+    font-size: 30px;
+}
+
+#article1 .imgs-img-1 {
+    width: 400px;
+    transform: rotate(-20deg);
+}
+
+#article1 .imgs-img-2 {
+    left: -300px;
+    top: -200px;
+    width: 400px;
+    transform: rotate(30deg);
+}
+
+#article2 .imgs-img-1 {
+    left: 300px;
+    top: 250px;
+    width: 400px;
+    transform: rotate(-20deg);
+}
+
+#article2 .imgs-img-2 {
+    left: -300px;
+    width: 400px;
+    transform: rotate(30deg);
+}
+
+#article2 .imgs-img-3 {
+    left: 500px;
+    top: 100px;
+    width: 400px;
+    transform: rotate(320deg);
+}
+
+#article2 li {
+    list-style: none;
+
+}
+
+#article3 .imgs-img-1 {
+    left: 100px;
+    top: 200px;
+    width: 400px;
+    transform: rotate(20deg);
+}
+
+#article3 .imgs-img-2 {
+    top: 200px;
+    left: 800px;
+    width: 300px;
+    transform: rotate(-30deg);
+}
+
+#article4 .imgs-img-1 {
+    left: 200px;
+    top: 200px;
+    width: 400px;
+    transform: rotate(-40deg);
+}
+
+#article4 .imgs-img-2 {
+    top: 300px;
+    left: 100px;
+    width: 400px;
+    transform: rotate(10deg);
+}
+
+#article4 .article-li {
+    list-style: none;
+    margin-right: 12.5vw;
+}
+
+.footer {
+    position: relative;
+    scroll-snap-align: end;
+    height: 100vh;
+    max-width: 100vw;
+    z-index: 10;
+}
+
+.footer .content {
+    font-family: 'Roboto Condensed', sans-serif;
+    position: relative;
+    z-index: 20;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(300deg, #000a, #0005), url(./img/F4s3yp.jpg);
+}
+
+.footer-h1 {
+    position: relative;
+    top: 10vh;
+    width: 100vw;
+    text-align: center;
+    font-size: 110px;
+    color: #fff;
+}
+
+.actual-info {
+    top: 5vh;
+    position: relative;
+    display: flex;
+    width: 80vw;
+    justify-content: space-around;
+    left: 10vw;
+
+}
+
+.footer-info-card {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    background-color: #0003;
+    border-radius: 20px;
+}
+
+.mail {
+    height: 500px;
+    width: 400px;
+}
+
+.phone {
+    height: 500px;
+    width: 400px;
+}
+
+.invert-icon {
+    width: 200px;
+    height: 200px;
+    filter: invert(100%);
+}
+
+.card-h2 {
+    font-size: 40px;
+}
+
+.card-li {
+    font-size: 30px;
+}
+
+.together-pic {
+    box-shadow: 0 0 40px 0 #000;
+    background: #0007;
+    border: 1px solid #0003;
+    position: relative;
+    position: absolute;
+    width: 200px;
+    top: 200px;
+    left: 250px;
+    transform: rotate(-30deg);
 }
